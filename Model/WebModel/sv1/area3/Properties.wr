@@ -1,0 +1,17 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area3" name="Movies" landmarks="sv1#area3#page14 sv1#area3#page15" landmark="true" layout:style="ClearStyle" layout:pageLayout="ClearStyle/Default" gr:x="305" gr:y="275" defaultPage="sv1#area3#page14">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="0" gr:y="675" id="sv1#area3#miu1" name="CheckLogin" moduleId="mov1#opm1">
+      <KOLink id="sv1#area3#miu1#kln3" name="KOLink3" to="sv1#area3#page17#mssu4">
+        <LinkParameter id="sv1#area3#miu1#kln3#par66" name="Please log in to post a comment_Shown Messages" sourceValue="Please log in to post a comment" target="sv1#area3#page17#mssu4.shownMessages"/>
+      </KOLink>
+      <OKLink id="sv1#area3#miu1#oln15" name="OKLink15" to="sv1#area3#page5#enu2">
+        <LinkParameter id="sv1#area3#miu1#oln15#par37" name="MovieId_MovieId" source="mov1#opm1#okcu2#ocp1" target="sv1#area3#page5#enu2#fld14_slot"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+    <CreateUnit gr:x="595" gr:y="680" id="sv1#area3#cru4" name="Create Comment" entity="ent2">
+      <OKLink id="sv1#area3#cru4#oln18" name="OKLink18" to="sv1#area3#page17#dau12">
+        <LinkParameter id="sv1#area3#cru4#oln18#par59" name="MovieId_PASSING_KeyCondition5 [oid]" sourceLinkParameter="sv1#area3#page5#enu2#ln31#par58" target="sv1#area3#page17#dau12#su25#kcond19.ent1#att1"/>
+      </OKLink>
+    </CreateUnit>
+  </OperationUnits>
+</Area>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?webml version="4.2.5.1"?>
+
+<WebProject xmlns:gr="http://www.webratio.com/2006/WebML/Graph" outputPath="${webapps_loc}/${project_name}" gr:showUnitContent="true" gr:showTooltip="true" httpPort="8080" httpsPort="8443" enableProjectDependencies="true" jobGroupName="WEBRATIO">
+  <ServiceDataProviders/>
+  <ReferencedProject name="WebRatio" natureId="com.webratio.ide.styles.wrstylenature"/>
+  <ReferencedProject name="Multiflex" natureId="com.webratio.ide.styles.wrstylenature"/>
+  <ReferencedProject name="FertileEnvironment" natureId="com.webratio.ide.styles.wrstylenature"/>
+  <ReferencedProject name="ClearStyle" natureId="com.webratio.ide.styles.wrstylenature"/>
+</WebProject>

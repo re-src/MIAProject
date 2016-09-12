@@ -1,0 +1,16 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="75" gr:y="70" id="mov1#opm1" name="isCommentValid">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm1#icu2" name="Input Collector" gr:x="40" gr:y="65">
+      <OKLink id="mov1#opm1#icu2#oln9" name="OKLink9" to="mov1#opm1#opg1#seu2">
+        <LinkParameter id="mov1#opm1#icu2#oln9#par38" name="MovieId_PASSING" source="mov1#opm1#icu2#icp2" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm1#icu2#icp2" name="MovieId"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="45" gr:y="175" id="mov1#opm1#okcu2" name="OK Collector2">
+      <OutputCollectorParameter id="mov1#opm1#okcu2#ocp1" name="MovieId"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="505" gr:y="175" id="mov1#opm1#kocu2" name="KO Collector2">
+      <OutputCollectorParameter id="mov1#opm1#kocu2#ocp2" name="MovieId"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,30 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page4" name="Actors" landmark="true">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv1#area1#page4#inu2" name="Actor List" entity="ent5" displayAttributes="ent5#att15 ent5#att14" linkOrder="sv1#area1#page4#inu2#ln12">
+      <SortAttribute attribute="ent5#att15" order="ascending"/>
+      <Link id="sv1#area1#page4#inu2#ln12" name="select actor" to="sv1#area3#page16#dau11" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page4#inu2">
+          <layout:Attribute attribute="ent5#att15"/>
+          <layout:Attribute attribute="ent5#att14"/>
+          <layout:Link link="sv1#area1#page4#inu2#ln12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

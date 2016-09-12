@@ -1,0 +1,28 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="195" gr:y="25" id="mov1#opm1#opg1" name="Operation Group 1" transaction="true">
+  <OperationUnits>
+    <GetUnit gr:x="125" gr:y="5" id="mov1#opm1#opg1#gtu2" name="GeUser" contextParameters="UserCtxParam" linkOrder="mov1#opm1#opg1#gtu2#ln10">
+      <Link id="mov1#opm1#opg1#gtu2#ln10" name="Link10" to="mov1#opm1#opg1#seu2" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <SelectorUnit gr:x="0" gr:y="0" id="mov1#opm1#opg1#seu2" name="SelectorUnit2" entity="User">
+      <Selector id="mov1#opm1#opg1#seu2#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm1#opg1#seu2#su2#kcond2" name="userId" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm1#opg1#seu2#oln10" name="OKLink10" to="mov1#opm1#opg1#switch2">
+        <LinkParameter id="mov1#opm1#opg1#seu2#oln10#par9" name="Data Size_Switch" source="dataSize" target="mov1#opm1#opg1#switch2.switch"/>
+        <LinkParameter id="mov1#opm1#opg1#seu2#oln10#par39" name="MovieId_PASSING" sourceLinkParameter="mov1#opm1#icu2#oln9#par38" passing="true"/>
+      </OKLink>
+      <KOLink id="mov1#opm1#opg1#seu2#kln2" name="KOLink2" to="mov1#opm1#kocu2">
+        <LinkParameter id="mov1#opm1#opg1#seu2#kln2#par41" name="MovieId_PASSING_MovieId" sourceLinkParameter="mov1#opm1#icu2#oln9#par38" target="mov1#opm1#kocu2#ocp2"/>
+      </KOLink>
+    </SelectorUnit>
+    <SwitchUnit gr:x="0" gr:y="125" id="mov1#opm1#opg1#switch2" name="SwitchUnit2">
+      <Case value="0"/>
+      <OKLink id="mov1#opm1#opg1#switch2#oln11" name="OKLink11" to="mov1#opm1#okcu2">
+        <LinkParameter id="mov1#opm1#opg1#switch2#oln11#par42" name="MovieId_PASSING_MovieId" sourceLinkParameter="mov1#opm1#opg1#seu2#oln10#par39" target="mov1#opm1#okcu2#ocp1"/>
+      </OKLink>
+      <OKLink id="mov1#opm1#opg1#switch2#oln12" name="OKLink12" to="mov1#opm1#kocu2" code="0">
+        <LinkParameter id="mov1#opm1#opg1#switch2#oln12#par40" name="MovieId_PASSING_MovieId" sourceLinkParameter="mov1#opm1#opg1#seu2#oln10#par39" target="mov1#opm1#kocu2#ocp2"/>
+      </OKLink>
+    </SwitchUnit>
+  </OperationUnits>
+</OperationGroup>

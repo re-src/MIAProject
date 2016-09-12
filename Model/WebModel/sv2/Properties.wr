@@ -1,0 +1,9 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Login" landmarks="sv2#page1" homePage="sv2#page1">
+  <OperationUnits>
+    <LoginUnit id="sv2#lgu1" name="Login" gr:x="90" gr:y="360">
+      <KOLink id="sv2#lgu1#kln5" name="KOLink4" to="sv2#page1#mssu2">
+        <LinkParameter id="sv2#lgu1#kln5#par7" name="Login failed_Shown Messages" target="sv2#page1#mssu2.shownMessages" sourceValue="Login failed"/>
+      </KOLink>
+    </LoginUnit>
+  </OperationUnits>
+</SiteView>

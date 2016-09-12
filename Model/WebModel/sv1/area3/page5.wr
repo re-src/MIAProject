@@ -1,0 +1,73 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="190" gr:y="650" id="sv1#area3#page5" name="Add Comment">
+  <ContentUnits>
+    <EntryUnit gr:x="5" gr:y="0" id="sv1#area3#page5#enu2" name="Add Comment" fieldOrder="sv1#area3#page5#enu2#fld12" linkOrder="sv1#area3#page5#enu2#ln31">
+      <Field id="sv1#area3#page5#enu2#fld12" name="comment" type="string" modifiable="true" preloaded="false">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area3#page5#enu2#fld12#mnd2" name="commentValidation"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area3#page5#enu2#fld14" name="MovieId" type="integer" modifiable="false" hidden="true" preloaded="true"/>
+      <Field id="sv1#area3#page5#enu2#fld17" name="update" type="timestamp" modifiable="false" preloaded="true" hidden="true"/>
+      <Link id="sv1#area3#page5#enu2#ln31" name="Create Comment" to="sv1#area3#cru4" type="normal" validate="true">
+        <LinkParameter id="sv1#area3#page5#enu2#ln31#par54" name="comment_comment" source="sv1#area3#page5#enu2#fld12" target="sv1#area3#cru4.ent2#att5"/>
+        <LinkParameter id="sv1#area3#page5#enu2#ln31#par55" name="MovieId_Movie.oid(CommentToMovie)" source="sv1#area3#page5#enu2#fld14" target="sv1#area3#cru4.rel2#role3.ent1#att1"/>
+        <LinkParameter id="sv1#area3#page5#enu2#ln31#par56" name="Current/Input Timestamp_PASSING_update" target="sv1#area3#cru4.ent2#att6" source="sv1#area3#page5#enu2#fld17"/>
+        <LinkParameter id="sv1#area3#page5#enu2#ln31#par58" name="MovieId_PASSING" source="sv1#area3#page5#enu2#fld14" passing="true"/>
+        <LinkParameter id="sv1#area3#page5#enu2#ln31#par63" name="userId_User.oid(CommentToUser)" source="sv1#area3#page5#enu2#fld18" target="sv1#area3#cru4.rel1#role2.userOID"/>
+      </Link>
+      <Field id="sv1#area3#page5#enu2#fld18" name="userId" type="integer" modifiable="false" preloaded="true" hidden="true"/>
+    </EntryUnit>
+    <GetUnit gr:x="140" gr:y="115" id="sv1#area3#page5#gtu5" name="Get User" contextParameters="UserCtxParam">
+      <Link id="sv1#area3#page5#gtu5#ln50" name="Link50" to="sv1#area3#page5#seu3" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <SelectorUnit gr:x="0" gr:y="105" id="sv1#area3#page5#seu3" name="Select User" entity="User">
+      <Link id="sv1#area3#page5#seu3#ln18" name="Link18" to="sv1#area3#page5#enu2" type="transport" validate="true">
+        <LinkParameter id="sv1#area3#page5#seu3#ln18#par62" name="oid_userId" source="userOIDArray" target="sv1#area3#page5#enu2#fld18_slot"/>
+      </Link>
+      <Selector id="sv1#area3#page5#seu3#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area3#page5#seu3#su3#kcond3" name="userCondition" predicate="in" implied="false"/>
+      </Selector>
+    </SelectorUnit>
+    <TimeUnit gr:x="155" gr:y="45" id="sv1#area3#page5#tmu6" name="Get Current Timestamp">
+      <Link id="sv1#area3#page5#tmu6#ln49" name="Link49" to="sv1#area3#page5#enu2" type="transport" validate="true">
+        <LinkParameter id="sv1#area3#page5#tmu6#ln49#par53" name="Current/Input Timestamp_PASSING" source="currentTimestamp" passing="true"/>
+        <LinkParameter id="sv1#area3#page5#tmu6#ln49#par61" name="Current/Input Timestamp_update" source="currentTimestamp" target="sv1#area3#page5#enu2#fld17_slot"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area3#page5#enu2">
+          <layout:Link link="sv1#area3#page5#enu2#ln31"/>
+          <layout:Field field="sv1#area3#page5#enu2#fld12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

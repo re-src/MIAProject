@@ -1,0 +1,87 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area3#page15" name="SearchMovies" landmark="true" layout:style="ClearStyle" gr:x="350" gr:y="0">
+  <ContentUnits>
+    <SelectorUnit id="sv1#area3#page15#seu5" name="CategorySelector" gr:x="185" gr:y="0" entity="ent3" distinctAttributes="ent3#att8">
+      <SortAttribute attribute="ent3#att8" order="ascending"/>
+      <Link id="sv1#area3#page15#seu5#ln39" name="Link24" to="sv1#area3#page15#enu5" type="transport" validate="true">
+        <LinkParameter id="sv1#area3#page15#seu5#ln39#par20" name="oid_catgory [label]" source="ent3#att8Array" target="sv1#area3#page15#enu5#sfld3_label"/>
+        <LinkParameter id="sv1#area3#page15#seu5#ln39#par21" name="name_catgory [output]" source="ent3#att7Array" target="sv1#area3#page15#enu5#sfld3_output"/>
+      </Link>
+    </SelectorUnit>
+    <EntryUnit id="sv1#area3#page15#enu5" name="SearchMovie" linkOrder="sv1#area3#page15#enu5#ln40" gr:x="40" gr:y="10">
+      <Field id="sv1#area3#page15#enu5#fld6" name="title" ajaxAutocompleteEnabled="false" ajaxAutocompleteType="selectionField" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area3#page15#enu5#fld6#mnd1" name="titleValidator" errorMessage="Please fill insert a valid title"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv1#area3#page15#enu5#sfld3" name="catgory" ajaxEventEnabled="false" ajaxEventIndicator="false" ajaxEventAlwaysFire="false" type="string"/>
+      <Link id="sv1#area3#page15#enu5#ln40" name="Search" to="sv1#area3#page15#inu11" type="normal" validate="true" ajaxEnabled="true">
+        <LinkParameter id="sv1#area3#page15#enu5#ln40#par22" name="catgory_CategoryRelation [oid]" source="sv1#area3#page15#enu5#sfld3" target="sv1#area3#page15#inu11#su22#rcond9.ent3#att7"/>
+        <LinkParameter id="sv1#area3#page15#enu5#ln40#par23" name="title_titleCondition" source="sv1#area3#page15#enu5#fld6" target="sv1#area3#page15#inu11#su22#acond2"/>
+      </Link>
+      <VRules/>
+    </EntryUnit>
+    <IndexUnit id="sv1#area3#page15#inu11" name="SearchMovieResult" linkOrder="sv1#area3#page15#inu11#ln41" gr:x="0" gr:y="115" entity="ent1" displayAttributes="ent1#att2">
+      <Selector id="sv1#area3#page15#inu11#su22" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#area3#page15#inu11#su22#acond2" name="titleCondition" predicate="beginsWith" booleanOperator="or" implied="false" attributes="ent1#att2" ignoreCase="true"/>
+        <RelationshipRoleCondition id="sv1#area3#page15#inu11#su22#rcond9" name="CategoryRelation" predicate="in" implied="true" role="rel7#role14"/>
+      </Selector>
+      <SortAttribute attribute="ent1#att2" order="ascending"/>
+      <Link id="sv1#area3#page15#inu11#ln41" name="select result" to="sv1#area3#page17#dau12" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area3#page15#enu5">
+          <layout:Field field="sv1#area3#page15#enu5#fld6"/>
+          <layout:Field field="sv1#area3#page15#enu5#sfld3"/>
+          <layout:Link link="sv1#area3#page15#enu5#ln40"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area3#page15#inu11">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Link link="sv1#area3#page15#inu11#ln41"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

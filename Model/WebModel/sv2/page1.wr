@@ -1,0 +1,160 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page1" name="Home" landmark="true" ignoreMasterPage="false" customDescriptor="false" layout:style="ClearStyle" layout:pageLayout="ClearStyle/Default" layout:layoutManager="grid" layout:frameLayout="None" gr:x="0" gr:y="200">
+  <ContentUnits>
+    <EntryUnit id="sv2#page1#enu1" name="Login Form" linkOrder="sv2#page1#enu1#ln2" gr:x="160" gr:y="0">
+      <Field id="sv2#page1#enu1#fld1" name="username" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page1#enu1#fld1#mnd4" name="userNameValidation" errorMessage="Please insert a valid name"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page1#enu1#fld2" name="password" type="password" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page1#enu1#fld2#mnd3" name="passwordValidation" errorMessage="Please insert a valid password"/>
+        </VRules>
+      </Field>
+      <Link id="sv2#page1#enu1#ln2" name="Login" to="sv2#lgu1" type="normal" validate="true">
+        <LinkParameter id="sv2#page1#enu1#ln2#par5" name="username_Username" source="sv2#page1#enu1#fld1" target="sv2#lgu1.username"/>
+        <LinkParameter id="sv2#page1#enu1#ln2#par6" name="password_Password" source="sv2#page1#enu1#fld2" target="sv2#lgu1.password"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit id="sv2#page1#mssu2" name="Login Message" gr:x="0" gr:y="0"/>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page1#mssu2"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page1#enu1">
+          <layout:Field field="sv2#page1#enu1#fld1"/>
+          <layout:Field field="sv2#page1#enu1#fld2"/>
+          <layout:Link link="sv2#page1#enu1#ln2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Grid>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12"/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

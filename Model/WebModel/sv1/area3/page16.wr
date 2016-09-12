@@ -1,0 +1,73 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area3#page16" name="ActorPage" layout:style="ClearStyle" layout:pageLayout="ClearStyle/Default" layout:splitSubPages="false" gr:hide="false" gr:x="0" gr:y="300">
+  <ContentUnits>
+    <DataUnit id="sv1#area3#page16#dau11" name="ActorUnit" gr:x="15" gr:y="125" entity="ent5" displayAttributes="ent5#att14 ent5#att15 ent5#att16">
+      <Selector id="sv1#area3#page16#dau11#su23" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area3#page16#dau11#su23#kcond18" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#area3#page16#dau11#ln42" name="Link22" to="sv1#area3#page16#inu12" type="transport" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+    <IndexUnit id="sv1#area3#page16#inu12" name="ActorMovies" linkOrder="sv1#area3#page16#inu12#ln43" gr:x="0" gr:y="0" entity="ent1" displayAttributes="ent1#att2 ent1#att3">
+      <Selector id="sv1#area3#page16#inu12#su24" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area3#page16#inu12#su24#rcond10" name="ActorRelation" predicate="in" implied="false" role="rel5#role10"/>
+      </Selector>
+      <Link id="sv1#area3#page16#inu12#ln43" name="select movie" to="sv1#area3#page17#dau12" type="normal" automaticCoupling="true" validate="true"/>
+      <SortAttribute attribute="ent1#att3" order="descending"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area3#page16#dau11">
+          <layout:Attribute attribute="ent5#att14"/>
+          <layout:Attribute attribute="ent5#att15"/>
+          <layout:Attribute attribute="ent5#att16"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area3#page16#inu12">
+          <layout:Link link="sv1#area3#page16#inu12#ln43"/>
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
